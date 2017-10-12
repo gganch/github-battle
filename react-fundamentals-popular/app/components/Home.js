@@ -9,7 +9,7 @@ class Home extends React.Component {
 					Github Battle: Battle your friends....
 				</h1>
 				<Link className='button' to='/battle'>
-					Battle
+					BATTLE
 				</Link>
 			</div>
 		)
