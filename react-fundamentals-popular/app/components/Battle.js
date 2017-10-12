@@ -8,11 +8,33 @@ class PlayerInput extends React.Component {
 		this.state = {
 			username: ''
 		}
+		this.handleChange = this.handleChange.bind(this);
+	}
+	handleChange(event) {
+		var value = event.target.value;
+
+		this.setState(function () {
+			return (
+				username: value
+			)
+		})
 	}
 
 	render() {
 		return (
-
+			<form className='column' >
+				<label className='header' htmlFor='username'>
+					{this.props.label}
+				</label>
+				<input
+				  id='username'
+				  placeholder='github username'
+				  type='text'
+				  autoComplete='off'
+				  value={this.state.username}
+				  onChange={this.handleChange}
+				/>
+			</form>
 		)
 	}
 }
