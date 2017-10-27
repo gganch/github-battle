@@ -1,6 +1,7 @@
 var React = require('react');
 var PropTypes = require('prop-types');
 var Link = require('react-router-dom').Link;
+var PlayerPreview = require('./PlayerPreview');
 
 function PlayerPreview (props) {
   return (
