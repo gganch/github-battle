@@ -11,9 +11,9 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	position: absolute;
-	top: 50%;
+	/*top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 #app {
@@ -59,6 +59,7 @@ a {
 
 .space-list-items {
 	margin-bottom: 7px;
+	font-size: 20px;
 }
 
 .avatar {
@@ -91,9 +92,9 @@ a {
 }
 
 .home-container {
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: center;*/
 	border: 10px solid white;
 	margin: 40px;
 	padding: 30px;
