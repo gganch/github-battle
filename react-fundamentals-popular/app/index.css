@@ -38,6 +38,11 @@ a {
 	cursor: pointer;
 }
 
+.reponame {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 .popular-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -60,7 +65,7 @@ a {
 }
 
 .popular-rank {
-	font-size: 20px;
+	font-size: 25px;
 	margin: 10px;
 }
 
