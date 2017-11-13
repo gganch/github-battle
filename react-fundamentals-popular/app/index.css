@@ -14,7 +14,6 @@ body {
 
 ul {
 	padding: 0;
-
 }
 
 li {
@@ -24,6 +23,8 @@ li {
 a {
 	text-decoration: none;
 	color: #34CBAE;
+	font-size: 20px;
+	margin-right: 20px;
 }
 
 .languages {
@@ -35,6 +36,11 @@ a {
 	margin: 10px;
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.reponame {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .popular-list {
@@ -50,6 +56,7 @@ a {
 
 .space-list-items {
 	margin-bottom: 7px;
+	font-size: 20px;
 }
 
 .avatar {
@@ -58,7 +65,7 @@ a {
 }
 
 .popular-rank {
-	font-size: 20px;
+	font-size: 25px;
 	margin: 10px;
 }
 
@@ -79,12 +86,13 @@ a {
 .row {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .home-container {
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: center;*/
 	border: 10px solid white;
 	margin: 40px;
 	padding: 30px;
@@ -118,6 +126,7 @@ a {
   transform: translateY(1px);
 }
 
+<<<<<<< HEAD
 .avatar {
   width: 150px;
   border-radius: 50%;
@@ -182,6 +191,20 @@ a {
   flex-direction: column;
   width: 500px;
   align-items: center;
+=======
+.column {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+@media (max-width:430px) {
+	.column {
+		width: 400px;
+	}
+>>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
 }
 
 .column input {
@@ -190,7 +213,11 @@ a {
   padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.43);
   font-size: 16px;
+<<<<<<< HEAD
   width: 80%;
+=======
+  width: 50%;
+>>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
 }
 
 .column label {
@@ -206,6 +233,7 @@ a {
 }
 
 .reset {
+<<<<<<< HEAD
   border: none;
   background: transparent;
   color: #d0021b;
@@ -216,4 +244,16 @@ a {
 
 .reset:hover {
   cursor: pointer;
+=======
+	border: none;
+	background: transparent;
+	color: #d0021b;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.reset:hover {
+	cursor: pointer;
+>>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
 }

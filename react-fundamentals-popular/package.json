@@ -4,7 +4,8 @@
   "description": "Project for React Training's fundamental course.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack -p"
   },
   "author": "Tyler McGinnis",
   "license": "MIT",
@@ -27,6 +28,9 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "npm-check": "^5.4.5",
+    "prop-types": "^15.5.4",
+    "query-string": "^5.0.1",
     "react": "^16.0.0-alpha.5",
     "react-dom": "^16.0.0-alpha.5",
     "react-router-dom": "^4.2.2"
