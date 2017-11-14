@@ -1,10 +1,6 @@
 var React = require('react');
 var PropTypes = require('prop-types');
 var Link = require('react-router-dom').Link;
-<<<<<<< HEAD
-=======
-var PlayerPreview = require('./PlayerPreview');
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
 
 function PlayerPreview (props) {
   return (
@@ -19,11 +15,7 @@ function PlayerPreview (props) {
       </div>
       <button
         className='reset'
-<<<<<<< HEAD
         onClick={props.onReset.bind(null, props.id)}>
-=======
-        onClick={props.onReset.bind(null, 'playerTwo')}>
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
           Reset
       </button>
     </div>
@@ -34,10 +26,7 @@ PlayerPreview.propTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   onReset: PropTypes.func.isRequired,
-<<<<<<< HEAD
   id: PropTypes.string.isRequired
-=======
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
 };
 
 class PlayerInput extends React.Component {
@@ -111,11 +100,7 @@ class Battle extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-<<<<<<< HEAD
 		this.handleReset = this.handleReset.bind(this);
-=======
-    this.handleReset = this.handleReset.bind(this);
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
   }
   handleSubmit(id, username) {
     this.setState(function () {
@@ -134,11 +119,7 @@ class Battle extends React.Component {
     })
   }
   render() {
-<<<<<<< HEAD
 		var match = this.props.match;
-=======
-    var match = this.props.match;
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
     var playerOneName = this.state.playerOneName;
     var playerOneImage = this.state.playerOneImage;
     var playerTwoName = this.state.playerTwoName;
@@ -158,19 +139,9 @@ class Battle extends React.Component {
             <PlayerPreview
               avatar={playerOneImage}
               username={playerOneName}
-<<<<<<< HEAD
               onReset={this.handleReset}
               id='playerOne'
             />}
-=======
-            >
-				<button
-				  className='reset'
-				  onClick={this.handleReset.bind(null, 'playerOne')}>
-					Reset
-				</button>
-			</PlayerPreview>}
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
 
           {!playerTwoName &&
             <PlayerInput
@@ -183,19 +154,9 @@ class Battle extends React.Component {
             <PlayerPreview
               avatar={playerTwoImage}
               username={playerTwoName}
-<<<<<<< HEAD
               onReset={this.handleReset}
               id='playerTwo'
             />}
-=======
-			  >
-  				<button
-  				  className='reset'
-  				  onClick={this.handleReset.bind(null, 'playerTwo')}>
-  					Reset
-  				</button>
-  			</PlayerPreview>}
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
         </div>
 
         {playerOneImage && playerTwoImage &&
@@ -206,12 +167,7 @@ class Battle extends React.Component {
               search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
             }}>
               Battle
-<<<<<<< HEAD
           </Link>}
-=======
-          </Link>
-	  	}
->>>>>>> eeafc4bfaf12ca1a9af593eed74d6b6e12bc65f1
       </div>
     )
   }

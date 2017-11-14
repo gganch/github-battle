@@ -1,7 +1,6 @@
 var React = require('react');
 var PropTypes = require('prop-types');
 var api = require('../utils/api.js');
-var Loading = require('./Loading.js')
 
 function SelectLanguage (props) {
 	var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
@@ -36,7 +35,7 @@ function RepoGrid (props) {
 								  alt={'Avatar for ' + repo.owner.login}
 								/>
 							</li>
-							<li className='reponame'><a target="_blank" href={repo.html_url}>{repo.name}</a></li>
+							<li><a href={repo.html_url}>{repo.name}</a></li>
 							<li>@{repo.owner.login}</li>
 							<li>{repo.stargazers_count} stars</li>
 						</ul>
@@ -98,7 +97,7 @@ class Popular extends React.Component {
 					onSelect={this.updateLanguage}
 				/>
 				{!this.state.repos
-					? <Loading />
+					? <p>LOADING</p>
 					: <RepoGrid repos={this.state.repos} />}
 			</div>
 		)
@@ -106,3 +105,43 @@ class Popular extends React.Component {
 }
 
 module.exports = Popular;
+
+// class Popular extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       selectedLanguage: 'All',
+//     };
+//
+//     this.updateLanguage = this.updateLanguage.bind(this);
+//   }
+//   updateLanguage(lang) {
+//     this.setState(function () {
+//       return {
+//         selectedLanguage: lang,
+//       }
+//     });
+//   }
+//   render() {
+//     var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
+//
+//     return (
+//       <div>
+//         <ul className='languages'>
+//           {languages.map(function (lang) {
+//             return (
+//               <li
+//                 style={lang === this.state.selectedLanguage ? {color: '#d0021b'} : null}
+//                 onClick={this.updateLanguage.bind(null, lang)}
+//                 key={lang}>
+//                   {lang}
+//               </li>
+//             )
+//           }, this)}
+//         </ul>
+//       </div>
+//     )
+//   }
+// }
+//
+// module.exports = Popular;
